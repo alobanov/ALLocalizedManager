@@ -1,0 +1,4 @@
+ALLocalizedManager
+==================
+
+Simple localized manager
