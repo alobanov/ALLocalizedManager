@@ -21,6 +21,7 @@
 		E864BD721910E19A00F15392 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E864BD701910E19A00F15392 /* ViewController.m */; };
 		E864BD731910E19A00F15392 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E864BD711910E19A00F15392 /* ViewController.xib */; };
 		E864BD771910E21000F15392 /* ALLocalizedManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E864BD761910E21000F15392 /* ALLocalizedManager.m */; };
+		E898222A1920A3C30030F6F1 /* examplePlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E898222C1920A3C30030F6F1 /* examplePlist.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,8 @@
 		E864BD751910E21000F15392 /* ALLocalizedManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALLocalizedManager.h; sourceTree = "<group>"; };
 		E864BD761910E21000F15392 /* ALLocalizedManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALLocalizedManager.m; sourceTree = "<group>"; };
 		E89697261910EB2700C68C38 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		E898222B1920A3C30030F6F1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/examplePlist.strings; sourceTree = "<group>"; };
+		E898222D1920A3CE0030F6F1 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/examplePlist.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +132,7 @@
 			children = (
 				E864BD471910E17400F15392 /* ALLocalizedExample-Info.plist */,
 				E864BD481910E17400F15392 /* InfoPlist.strings */,
+				E898222C1920A3C30030F6F1 /* examplePlist.strings */,
 				E864BD4B1910E17400F15392 /* main.m */,
 				E864BD4D1910E17400F15392 /* ALLocalizedExample-Prefix.pch */,
 			);
@@ -247,6 +251,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E898222A1920A3C30030F6F1 /* examplePlist.strings in Resources */,
 				E864BD4A1910E17400F15392 /* InfoPlist.strings in Resources */,
 				E864BD731910E19A00F15392 /* ViewController.xib in Resources */,
 				E864BD521910E17400F15392 /* Images.xcassets in Resources */,
@@ -300,6 +305,15 @@
 				E89697261910EB2700C68C38 /* ru */,
 			);
 			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		E898222C1920A3C30030F6F1 /* examplePlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E898222B1920A3C30030F6F1 /* en */,
+				E898222D1920A3CE0030F6F1 /* ru */,
+			);
+			name = examplePlist.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

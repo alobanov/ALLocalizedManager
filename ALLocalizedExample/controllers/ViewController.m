@@ -11,6 +11,7 @@
 @interface ViewController ()
 
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+@property (weak, nonatomic) IBOutlet UILabel *currentLangLabel;
 @property (weak, nonatomic) IBOutlet UIButton *changeLangBtn;
 
 @end
@@ -44,6 +45,7 @@
     [_changeLangBtn setTitle:ALLocalizedString(@"Change_language", @"Изменить язык")
                     forState:UIControlStateNormal ];
     [_titleLabel setText:ALLocalizedString(@"Hello", @"Привет мир")];
+    [_currentLangLabel setText:ALLocalizedStringFromTable(@"Current_lang", @"Русский", @"examplePlist")];
 }
 
 - (IBAction) changeLanguage:(UIButton *) button {
