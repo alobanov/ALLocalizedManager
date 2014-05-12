@@ -44,13 +44,22 @@ static NSBundle *bundle;
     return [bundle localizedStringForKey:key value:comment table:@"InfoPlist"];
 }
 
+- (NSString *) localizedStringFromTableForKey:(NSString *)key value:(NSString *)comment andTable:(NSString *) table {
+    return [bundle localizedStringForKey:key value:comment table:table];
+}
+
 #pragma mark - Lang init
 
 - (void) initLang
 {
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     if ([defaults objectForKey:UserdefaultsKey_Lang]) {
-        [self setLang:[defaults objectForKey:UserdefaultsKey_Lang]];
+        if ([self existLangFromUD]) {
+            [self setLang:[defaults objectForKey:UserdefaultsKey_Lang]];
+        } else {
+            [self resetLocalization];
+            return;
+        }
     } else {
         NSArray *langList = [self languageList];
         if ([langList count] == 1) {
@@ -83,6 +92,20 @@ static NSBundle *bundle;
     if (!self.currentLanguage) {
         [self setLang:@"en"];
     }
+}
+
+- (BOOL) existLangFromUD {
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSString *udLang = [defaults objectForKey:UserdefaultsKey_Lang];
+    
+    NSArray *langList = [self languageList];
+    for (NSDictionary *langDic in langList) {
+        if ([langDic objectForKey:udLang]) {
+            return YES;
+        }
+    }
+    
+    return NO;
 }
 
 #pragma mark - Lang get
@@ -152,9 +175,9 @@ static NSBundle *bundle;
 
 - (UIImage *) imageForResource:(NSString *) resource ofType:(NSString *) type {
     NSString *path = [[NSBundle mainBundle] pathForResource:resource
-                                           ofType:type
-                                      inDirectory:nil
-                                  forLocalization:[self getLang]];
+                                                     ofType:type
+                                                inDirectory:nil
+                                            forLocalization:[self getLang]];
     
     return [UIImage imageWithContentsOfFile:path];
 }
@@ -174,7 +197,7 @@ static NSBundle *bundle;
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     [defaults removeObjectForKey:UserdefaultsKey_Lang];
     [defaults synchronize];
-
+    
     [self initLang];
 }
 

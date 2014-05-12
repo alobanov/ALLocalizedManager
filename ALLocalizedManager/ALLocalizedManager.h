@@ -14,9 +14,6 @@
 #define ALLocalizedInit \
 [ALLocalizedManager defaultManager]
 
-#define ALLocalizedString(key, comment) \
-[[ALLocalizedManager defaultManager] localizedStringForKey:(key) value:(comment)]
-
 #define ALLocalizationSetLanguageByIndex(language) \
 [[ALLocalizedManager defaultManager] setLangByIndex:(language)]
 
@@ -44,6 +41,14 @@
 #define ALLocalizationImage(resource, type) \
 [[ALLocalizedManager defaultManager] imageForResource:(resource) ofType:(type)]
 
+// localized string
+#define ALLocalizedString(key, comment) \
+[[ALLocalizedManager defaultManager] localizedStringForKey:(key) value:(comment)]
+
+#define ALLocalizedStringFromTable(key, comment, tableName) \
+[[ALLocalizedManager defaultManager] localizedStringFromTableForKey:(key) value:(comment) andTable:(tableName)]
+
+
 @interface ALLocalizedManager : NSObject;
 
 + (ALLocalizedManager*) defaultManager;
@@ -51,7 +56,7 @@
 #pragma mark - Localized
 
 - (NSString *) localizedStringForKey:(NSString *)key value:(NSString *)comment;
-
+- (NSString *) localizedStringFromTableForKey:(NSString *)key value:(NSString *)comment andTable:(NSString *) table;
 
 #pragma mark - Lang set
 

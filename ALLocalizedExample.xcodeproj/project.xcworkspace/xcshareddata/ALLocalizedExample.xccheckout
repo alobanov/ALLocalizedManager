@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>2B6A1872-A03D-44A3-8394-E6E84C5CA633</string>
+	<key>IDESourceControlProjectName</key>
+	<string>ALLocalizedExample</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>81231F25-6436-49AF-8282-36998981608D</key>
+		<string>https://github.com/alobanov/ALLocalizedManager.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>ALLocalizedExample.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>81231F25-6436-49AF-8282-36998981608D</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/alobanov/ALLocalizedManager.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>81231F25-6436-49AF-8282-36998981608D</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>81231F25-6436-49AF-8282-36998981608D</string>
+			<key>IDESourceControlWCCName</key>
+			<string>ALLocalizedManager</string>
+		</dict>
+	</array>
+</dict>
+</plist>
