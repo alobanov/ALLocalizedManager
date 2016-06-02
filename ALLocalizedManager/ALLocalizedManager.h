@@ -46,7 +46,7 @@
 [[ALLocalizedManager sharedInstance] localizedStringFromTableForKey:(key) value:(comment) andTable:(tableName)]
 
 #define ALLocalizedStringGeneral(key, comment) \
-[[ALLocalizedManager defaultManager] localizedStringFromTableForKey:(key) value:(comment) andTable:@"Localizable"]
+[[ALLocalizedManager sharedInstance] localizedStringFromTableForKey:(key) value:(comment) andTable:@"Localizable"]
 
 @interface ALLocalizedManager : NSObject;
 
