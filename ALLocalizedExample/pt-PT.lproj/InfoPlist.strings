@@ -1,0 +1,4 @@
+/* Localized versions of Info.plist keys */
+
+"Hello" = "Hello world!.";
+"Change_language" = "Change language.";

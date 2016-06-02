@@ -35,6 +35,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		18E12AB81D0033E700FEB443 /* pt-PT */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-PT"; path = "pt-PT.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		18E12AB91D0033E700FEB443 /* pt-PT */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-PT"; path = "pt-PT.lproj/examplePlist.strings"; sourceTree = "<group>"; };
 		E864BD3C1910E17400F15392 /* ALLocalizedExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ALLocalizedExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E864BD3F1910E17400F15392 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E864BD411910E17400F15392 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -234,6 +236,7 @@
 			knownRegions = (
 				en,
 				ru,
+				"pt-PT",
 			);
 			mainGroup = E864BD331910E17400F15392;
 			productRefGroup = E864BD3D1910E17400F15392 /* Products */;
@@ -303,6 +306,7 @@
 			children = (
 				E864BD491910E17400F15392 /* en */,
 				E89697261910EB2700C68C38 /* ru */,
+				18E12AB81D0033E700FEB443 /* pt-PT */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -312,6 +316,7 @@
 			children = (
 				E898222B1920A3C30030F6F1 /* en */,
 				E898222D1920A3CE0030F6F1 /* ru */,
+				18E12AB91D0033E700FEB443 /* pt-PT */,
 			);
 			name = examplePlist.strings;
 			sourceTree = "<group>";

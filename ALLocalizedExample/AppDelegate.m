@@ -14,7 +14,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // language settings
-    [[ALLocalizedManager sharedInstance] setLanguages:@[ @{@"ru": @"Русский"}, @{@"en": @"English"} ]];
+    [[ALLocalizedManager sharedInstance] setLanguages:@[ @{@"ru": @"Русский"}, @{@"en": @"English"}, @{@"pt-PT": @"Portugal"} ]];
     [[ALLocalizedManager sharedInstance] setDefaultLanguage:@"ru"];
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];

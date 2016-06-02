@@ -68,7 +68,7 @@ static ALLocalizedManager *SINGLETON = nil;
     if (self.currentLanguage) {
         return self.currentLanguage;
     } else {
-        return [[[NSLocale preferredLanguages] objectAtIndex:0] substringToIndex:2];
+        return [self systemPreferredLanguage];
     }
 }
 
@@ -240,13 +240,31 @@ static ALLocalizedManager *SINGLETON = nil;
 
 - (void)restoreSystemLanguage {
     
-    NSString *langID = [[[NSLocale preferredLanguages] objectAtIndex:0] substringToIndex:2];
+    NSString *langID = [self systemPreferredLanguage];
     if (langID == nil) return;
     
     NSDictionary *langInfo = [self languageByIdentifier:langID];
     if (langInfo == nil) return;
     
     [self setLang:langID];
+}
+
+#pragma mark - System lang ID
+
+- (NSString *)systemPreferredLanguage {
+    NSString *langID = [[NSLocale preferredLanguages] objectAtIndex:0];
+    NSDictionary *langInfo = [self languageByIdentifier:langID];
+    if (langInfo) {
+        return langID;
+    }
+    
+    langID = [langID substringToIndex:2];
+    langInfo = [self languageByIdentifier:langID];
+    if (langInfo) {
+        return langID;
+    }
+    
+    return nil;
 }
 
 #pragma mark - Observation

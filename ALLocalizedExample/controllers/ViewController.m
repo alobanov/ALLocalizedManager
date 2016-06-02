@@ -60,7 +60,7 @@
 
 - (IBAction) changeLanguage:(UIButton *) button {
     NSString *curLang = [[ALLocalizedManager sharedInstance] getLang];
-    NSString *newLang = ([curLang isEqualToString:@"ru"]) ? @"en" : @"ru";
+    NSString *newLang = ([curLang isEqualToString:@"ru"]) ? @"pt-PT" : @"ru";
     ALLocalizationSetLanguage(newLang);
 }
 
