@@ -174,6 +174,12 @@ static ALLocalizedManager *SINGLETON = nil;
     [self restoreCurrentlanguage];
 }
 
+#pragma mark - Languages
+
+- (NSArray *)languages {
+    return self.languagesStore;
+}
+
 - (void)setDefaultLanguage:(NSString *)languageIdentifier {
     NSDictionary *langInfo = [self languageByIdentifier:languageIdentifier];
     if (langInfo == nil) return;

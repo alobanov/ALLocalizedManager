@@ -64,6 +64,9 @@
 
 - (void) setLang:(NSString *) lang;
 
+#pragma mark - Languages
+- (NSArray *)languages;
+
 #pragma marl - Localized imagePath
 - (NSString *) pathForResource:(NSString *) resource ofType:(NSString *) type;
 - (UIImage *) imageForResource:(NSString *) resource ofType:(NSString *) type;
