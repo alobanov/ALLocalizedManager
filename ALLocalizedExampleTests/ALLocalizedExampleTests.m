@@ -10,14 +10,16 @@
 
 @interface ALLocalizedExampleTests : XCTestCase
 
+@property (strong, nonatomic) NSArray *languages;
+
 @end
 
 @implementation ALLocalizedExampleTests
 
-- (void)setUp
-{
+- (void)setUp {
     [super setUp];
-    // Put setup code here. This method is called before the invocation of each test method in the class.
+    
+    self.languages = @[ @{@"ru": @"Русский"}, @{@"en": @"English"} ];
 }
 
 - (void)tearDown
@@ -26,9 +28,18 @@
     [super tearDown];
 }
 
-- (void)testExample
-{
-    XCTFail(@"No implementation for \"%s\"", __PRETTY_FUNCTION__);
+- (void)testSetupDefault {
+    
+    [[ALLocalizedManager sharedInstance] resetLocalization];
+    
+    [[ALLocalizedManager sharedInstance] setLanguages:self.languages];
+    [[ALLocalizedManager sharedInstance] setDefaultLanguage:@"ru"];
+    
+    NSString *systemLang = [[[NSLocale preferredLanguages] firstObject] substringToIndex:2];
+    
+    NSString *lang = [[ALLocalizedManager sharedInstance] getLang];
+    
+    XCTAssertEqual(lang, systemLang);
 }
 
 @end

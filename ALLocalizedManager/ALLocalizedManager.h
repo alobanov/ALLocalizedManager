@@ -11,47 +11,46 @@
 #define UserdefaultsKey_Lang @"UserdefaultsKey_Lang"
 #define ALLocalizedManagerChangeLangNotification @"ALLocalizedManagerChangeLangNotification"
 
-#define ALLocalizedInit \
-[ALLocalizedManager defaultManager]
-
 #define ALLocalizationSetLanguageByIndex(language) \
-[[ALLocalizedManager defaultManager] setLangByIndex:(language)]
+[[ALLocalizedManager sharedInstance] setLangByIndex:(language)]
 
 #define ALLocalizationSetLanguage(language) \
-[[ALLocalizedManager defaultManager] setLang:(language)]
+[[ALLocalizedManager sharedInstance] setLang:(language)]
 
 #define ALLocalizationGetLanguage \
-[[ALLocalizedManager defaultManager] getLang]
+[[ALLocalizedManager sharedInstance] getLang]
 
 #define ALLocalizationGetNameLanguage \
-[[ALLocalizedManager defaultManager] getNameLang]
+[[ALLocalizedManager sharedInstance] getNameLang]
 
 #define ALLocalizationGetLanguageIndex \
-[[ALLocalizedManager defaultManager] getLangIndex]
+[[ALLocalizedManager sharedInstance] getLangIndex]
 
 #define ALLocalizationReset \
-[[ALLocalizedManager defaultManager] resetLocalization]
+[[ALLocalizedManager sharedInstance] resetLocalization]
 
 #define ALLocalizationThrowNotification \
-[[ALLocalizedManager defaultManager] throwNotification]
+[[ALLocalizedManager sharedInstance] throwNotification]
 
 #define ALLocalizationResource(resource, type) \
-[[ALLocalizedManager defaultManager] pathForResource:(resource) ofType:(type)]
+[[ALLocalizedManager sharedInstance] pathForResource:(resource) ofType:(type)]
 
 #define ALLocalizationImage(resource, type) \
-[[ALLocalizedManager defaultManager] imageForResource:(resource) ofType:(type)]
+[[ALLocalizedManager sharedInstance] imageForResource:(resource) ofType:(type)]
 
 // localized string
 #define ALLocalizedString(key, comment) \
-[[ALLocalizedManager defaultManager] localizedStringForKey:(key) value:(comment)]
+[[ALLocalizedManager sharedInstance] localizedStringForKey:(key) value:(comment)]
 
 #define ALLocalizedStringFromTable(key, comment, tableName) \
-[[ALLocalizedManager defaultManager] localizedStringFromTableForKey:(key) value:(comment) andTable:(tableName)]
+[[ALLocalizedManager sharedInstance] localizedStringFromTableForKey:(key) value:(comment) andTable:(tableName)]
 
+#define ALLocalizedStringGeneral(key, comment) \
+[[ALLocalizedManager sharedInstance] localizedStringFromTableForKey:(key) value:(comment) andTable:@"Localizable"]
 
 @interface ALLocalizedManager : NSObject;
 
-+ (ALLocalizedManager*) defaultManager;
++ (id)sharedInstance;
 
 #pragma mark - Localized
 
@@ -60,8 +59,13 @@
 
 #pragma mark - Lang set
 
-- (void) setLangByIndex:(NSInteger) index;
+- (void)setLanguages:(NSArray *)languages;
+- (void)setDefaultLanguage:(NSString *)languageIdentifier;
+
 - (void) setLang:(NSString *) lang;
+
+#pragma mark - Languages
+- (NSArray *)languages;
 
 #pragma marl - Localized imagePath
 - (NSString *) pathForResource:(NSString *) resource ofType:(NSString *) type;
@@ -69,7 +73,6 @@
 
 #pragma mark - Lang get
 
-- (NSInteger) getLangIndex;
 - (NSString *) getLang;
 - (NSString *) getNameLang;
 
@@ -77,5 +80,10 @@
 
 - (void) resetLocalization;
 - (void) throwNotification;
+
+#pragma mark - Observation
+
+- (void)addChangeLanguageBlock:(void (^)(NSString *newLang))changeBlock forObject:(NSObject *)observer;
+- (void)removeChangeLanguageBlockForObject:(NSObject *)observer;
 
 @end

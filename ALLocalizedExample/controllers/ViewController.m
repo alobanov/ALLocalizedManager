@@ -27,16 +27,26 @@
     return self;
 }
 
-- (void)viewDidLoad
-{
+- (void)dealloc {
+    // observe
+    [[ALLocalizedManager sharedInstance] removeChangeLanguageBlockForObject:self];
+}
+
+- (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-    NSNotificationCenter *nc = [NSNotificationCenter defaultCenter];
-    [nc addObserver:self
-           selector:@selector(updateTitles:)
-               name:ALLocalizedManagerChangeLangNotification
-             object:nil];
+    // observe
+    [[ALLocalizedManager sharedInstance] addChangeLanguageBlock:^(NSString *newLang) {
+        [self updateTitles:nil];
+        
+    } forObject:self];
+    
+//    NSNotificationCenter *nc = [NSNotificationCenter defaultCenter];
+//    [nc addObserver:self
+//           selector:@selector(updateTitles:)
+//               name:ALLocalizedManagerChangeLangNotification
+//             object:nil];
     
     [self updateTitles:nil];
 }
@@ -49,9 +59,9 @@
 }
 
 - (IBAction) changeLanguage:(UIButton *) button {
-    NSInteger index = (ALLocalizationGetLanguageIndex == 0)?1:0;
-    ALLocalizationSetLanguageByIndex(index);
-    ALLocalizationThrowNotification;
+    NSString *curLang = [[ALLocalizedManager sharedInstance] getLang];
+    NSString *newLang = ([curLang isEqualToString:@"ru"]) ? @"pt-PT" : @"ru";
+    ALLocalizationSetLanguage(newLang);
 }
 
 - (void)didReceiveMemoryWarning

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ALLocalizedExampleTests/ALLocalizedExampleTests.m"
+            timestampString = "486549328.091332"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
+            landmarkName = "-testSetupDefault"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[ALLocalizedExampleTests testSetupDefault]"
+                  moduleName = "ALLocalizedExampleTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/avvakumov/Documents/ios/vendors_forks/ALLocalizedManager/ALLocalizedExampleTests/ALLocalizedExampleTests.m"
+                  timestampString = "486549099.282589"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "39"
+                  endingLineNumber = "39"
+                  offsetFromSymbolStart = "317">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[ALLocalizedExampleTests testSetupDefault]"
+                  moduleName = "ALLocalizedExampleTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/avvakumov/Documents/ios/vendors_forks/ALLocalizedManager/ALLocalizedExampleTests/ALLocalizedExampleTests.m"
+                  timestampString = "486549099.282753"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "39"
+                  endingLineNumber = "39"
+                  offsetFromSymbolStart = "366">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[ALLocalizedExampleTests testSetupDefault]"
+                  moduleName = "ALLocalizedExampleTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/avvakumov/Documents/ios/vendors_forks/ALLocalizedManager/ALLocalizedExampleTests/ALLocalizedExampleTests.m"
+                  timestampString = "486549099.282944"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "39"
+                  endingLineNumber = "39"
+                  offsetFromSymbolStart = "1050">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[ALLocalizedExampleTests testSetupDefault]"
+                  moduleName = "ALLocalizedExampleTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/avvakumov/Documents/ios/vendors_forks/ALLocalizedManager/ALLocalizedExampleTests/ALLocalizedExampleTests.m"
+                  timestampString = "486549099.283208"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "39"
+                  endingLineNumber = "39"
+                  offsetFromSymbolStart = "1141">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[ALLocalizedExampleTests testSetupDefault]"
+                  moduleName = "ALLocalizedExampleTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/avvakumov/Documents/ios/vendors_forks/ALLocalizedManager/ALLocalizedExampleTests/ALLocalizedExampleTests.m"
+                  timestampString = "486549099.283396"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "39"
+                  endingLineNumber = "39"
+                  offsetFromSymbolStart = "1263">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
