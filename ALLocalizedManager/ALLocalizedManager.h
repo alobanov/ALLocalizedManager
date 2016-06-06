@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 #define UserdefaultsKey_Lang @"UserdefaultsKey_Lang"
 #define ALLocalizedManagerChangeLangNotification @"ALLocalizedManagerChangeLangNotification"
