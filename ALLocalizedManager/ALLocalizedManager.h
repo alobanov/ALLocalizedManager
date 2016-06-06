@@ -87,4 +87,7 @@
 - (void)addChangeLanguageBlock:(void (^)(NSString *newLang))changeBlock forObject:(NSObject *)observer;
 - (void)removeChangeLanguageBlockForObject:(NSObject *)observer;
 
+#pragma mark - Language bundle
+- (NSBundle *)bundle;
+
 @end
