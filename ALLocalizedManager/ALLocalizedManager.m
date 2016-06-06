@@ -298,4 +298,11 @@ static ALLocalizedManager *SINGLETON = nil;
     }
 }
 
+#pragma mark - Language bundle
+
+- (NSBundle *)bundle {
+    return bundle;
+}
+
+
 @end

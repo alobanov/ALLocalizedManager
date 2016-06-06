@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "ALLocalizedManager"
-  s.version      = "0.9.5"
+  s.version      = "0.9.6"
   s.summary      = "Manager for localizable strings"
   s.homepage     = "https://github.com/alobanov/ALLocalizedManager"
   s.license      = { :type => "MIT", :file => "LICENSE" }
