@@ -292,8 +292,9 @@ static ALLocalizedManager *SINGLETON = nil;
 - (void)sendNewLanguageByObservers {
     NSString *langID = self.currentLanguage;
     
-    for (NSString *key in self.changedBlocks) {
-        void (^changedBlock)(NSString *newLang) = self.changedBlocks[key];
+    NSDictionary *changedBlocks = [self.changedBlocks copy];
+    for (NSString *key in changedBlocks) {
+        void (^changedBlock)(NSString *newLang) = changedBlocks[key];
         changedBlock( langID );
     }
 }
