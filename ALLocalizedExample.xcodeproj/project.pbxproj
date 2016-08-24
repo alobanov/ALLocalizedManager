@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		185A53C71D6D6A680037E974 /* LocalizablePlural.strings in Resources */ = {isa = PBXBuildFile; fileRef = 185A53C91D6D6A680037E974 /* LocalizablePlural.strings */; };
+		185A53D31D6D6BC10037E974 /* PluralViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 185A53D11D6D6BC10037E974 /* PluralViewController.m */; };
+		185A53D41D6D6BC10037E974 /* PluralViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 185A53D21D6D6BC10037E974 /* PluralViewController.xib */; };
 		E864BD401910E17400F15392 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E864BD3F1910E17400F15392 /* Foundation.framework */; };
 		E864BD421910E17400F15392 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E864BD411910E17400F15392 /* CoreGraphics.framework */; };
 		E864BD441910E17400F15392 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E864BD431910E17400F15392 /* UIKit.framework */; };
@@ -22,6 +25,7 @@
 		E864BD731910E19A00F15392 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E864BD711910E19A00F15392 /* ViewController.xib */; };
 		E864BD771910E21000F15392 /* ALLocalizedManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E864BD761910E21000F15392 /* ALLocalizedManager.m */; };
 		E898222A1920A3C30030F6F1 /* examplePlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E898222C1920A3C30030F6F1 /* examplePlist.strings */; };
+		FEDFE1890CD5EF1CB40E612C /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E4270CA681650C1E522A953 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,8 +39,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0B7DF3C4E82ECDE5F75F09E6 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		185A53C81D6D6A680037E974 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LocalizablePlural.strings; sourceTree = "<group>"; };
+		185A53CA1D6D6A690037E974 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LocalizablePlural.strings; sourceTree = "<group>"; };
+		185A53CB1D6D6A6A0037E974 /* pt-PT */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-PT"; path = "pt-PT.lproj/LocalizablePlural.strings"; sourceTree = "<group>"; };
+		185A53D01D6D6BC10037E974 /* PluralViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PluralViewController.h; sourceTree = "<group>"; };
+		185A53D11D6D6BC10037E974 /* PluralViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PluralViewController.m; sourceTree = "<group>"; };
+		185A53D21D6D6BC10037E974 /* PluralViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PluralViewController.xib; sourceTree = "<group>"; };
 		18E12AB81D0033E700FEB443 /* pt-PT */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-PT"; path = "pt-PT.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		18E12AB91D0033E700FEB443 /* pt-PT */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-PT"; path = "pt-PT.lproj/examplePlist.strings"; sourceTree = "<group>"; };
+		2AEB3D0518BA8B44E8993F28 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		4E4270CA681650C1E522A953 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		E864BD3C1910E17400F15392 /* ALLocalizedExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ALLocalizedExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E864BD3F1910E17400F15392 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E864BD411910E17400F15392 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -70,6 +83,7 @@
 				E864BD421910E17400F15392 /* CoreGraphics.framework in Frameworks */,
 				E864BD441910E17400F15392 /* UIKit.framework in Frameworks */,
 				E864BD401910E17400F15392 /* Foundation.framework in Frameworks */,
+				FEDFE1890CD5EF1CB40E612C /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,6 +100,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		185A53CC1D6D6B960037E974 /* plural */ = {
+			isa = PBXGroup;
+			children = (
+				185A53D01D6D6BC10037E974 /* PluralViewController.h */,
+				185A53D11D6D6BC10037E974 /* PluralViewController.m */,
+				185A53D21D6D6BC10037E974 /* PluralViewController.xib */,
+			);
+			path = plural;
+			sourceTree = "<group>";
+		};
+		4DE65E23EF0F72665A5E04C7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2AEB3D0518BA8B44E8993F28 /* Pods.debug.xcconfig */,
+				0B7DF3C4E82ECDE5F75F09E6 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		E864BD331910E17400F15392 = {
 			isa = PBXGroup;
 			children = (
@@ -94,6 +127,7 @@
 				E864BD5E1910E17400F15392 /* ALLocalizedExampleTests */,
 				E864BD3E1910E17400F15392 /* Frameworks */,
 				E864BD3D1910E17400F15392 /* Products */,
+				4DE65E23EF0F72665A5E04C7 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -113,6 +147,7 @@
 				E864BD411910E17400F15392 /* CoreGraphics.framework */,
 				E864BD431910E17400F15392 /* UIKit.framework */,
 				E864BD581910E17400F15392 /* XCTest.framework */,
+				4E4270CA681650C1E522A953 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -137,6 +172,7 @@
 				E898222C1920A3C30030F6F1 /* examplePlist.strings */,
 				E864BD4B1910E17400F15392 /* main.m */,
 				E864BD4D1910E17400F15392 /* ALLocalizedExample-Prefix.pch */,
+				185A53C91D6D6A680037E974 /* LocalizablePlural.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -161,6 +197,7 @@
 		E864BD6E1910E18F00F15392 /* controllers */ = {
 			isa = PBXGroup;
 			children = (
+				185A53CC1D6D6B960037E974 /* plural */,
 				E864BD6F1910E19A00F15392 /* ViewController.h */,
 				E864BD701910E19A00F15392 /* ViewController.m */,
 				E864BD711910E19A00F15392 /* ViewController.xib */,
@@ -184,9 +221,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E864BD681910E17400F15392 /* Build configuration list for PBXNativeTarget "ALLocalizedExample" */;
 			buildPhases = (
+				F5E73D8602C3C358AF0AA539 /* Check Pods Manifest.lock */,
 				E864BD381910E17400F15392 /* Sources */,
 				E864BD391910E17400F15392 /* Frameworks */,
 				E864BD3A1910E17400F15392 /* Resources */,
+				2A447E2948E5C1E27FA5838F /* Embed Pods Frameworks */,
+				99530837C858EC4DDC249A9A /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -254,10 +294,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				185A53D41D6D6BC10037E974 /* PluralViewController.xib in Resources */,
 				E898222A1920A3C30030F6F1 /* examplePlist.strings in Resources */,
 				E864BD4A1910E17400F15392 /* InfoPlist.strings in Resources */,
 				E864BD731910E19A00F15392 /* ViewController.xib in Resources */,
 				E864BD521910E17400F15392 /* Images.xcassets in Resources */,
+				185A53C71D6D6A680037E974 /* LocalizablePlural.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,6 +312,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2A447E2948E5C1E27FA5838F /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		99530837C858EC4DDC249A9A /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F5E73D8602C3C358AF0AA539 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		E864BD381910E17400F15392 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -278,6 +368,7 @@
 				E864BD721910E19A00F15392 /* ViewController.m in Sources */,
 				E864BD501910E17400F15392 /* AppDelegate.m in Sources */,
 				E864BD771910E21000F15392 /* ALLocalizedManager.m in Sources */,
+				185A53D31D6D6BC10037E974 /* PluralViewController.m in Sources */,
 				E864BD4C1910E17400F15392 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -301,6 +392,16 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		185A53C91D6D6A680037E974 /* LocalizablePlural.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				185A53C81D6D6A680037E974 /* en */,
+				185A53CA1D6D6A690037E974 /* ru */,
+				185A53CB1D6D6A6A0037E974 /* pt-PT */,
+			);
+			name = LocalizablePlural.strings;
+			sourceTree = "<group>";
+		};
 		E864BD481910E17400F15392 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -396,6 +497,7 @@
 		};
 		E864BD691910E17400F15392 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2AEB3D0518BA8B44E8993F28 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -409,6 +511,7 @@
 		};
 		E864BD6A1910E17400F15392 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0B7DF3C4E82ECDE5F75F09E6 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;

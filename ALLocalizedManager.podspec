@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "ALLocalizedManager"
-  s.version      = "0.9.7"
+  s.version      = "0.10.0"
   s.summary      = "Manager for localizable strings"
   s.homepage     = "https://github.com/alobanov/ALLocalizedManager"
   s.license      = { :type => "MIT", :file => "LICENSE" }
@@ -13,5 +13,7 @@ Pod::Spec.new do |s|
   s.public_header_files = "ALLocalizedManager/*.{h}"
   s.framework    = "UIKit"
   s.requires_arc = true
+  
+  s.dependency 'TTTLocalizedPluralString'
 
 end
