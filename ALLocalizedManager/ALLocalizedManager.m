@@ -8,6 +8,8 @@
 
 #import "ALLocalizedManager.h"
 
+#import <TTTLocalizedPluralString/TTTLocalizedPluralString.h>
+
 @interface ALLocalizedManager()
 
 @property (strong, nonatomic) NSString *currentLanguage;
@@ -60,6 +62,14 @@ static ALLocalizedManager *SINGLETON = nil;
 
 - (NSString *) localizedStringFromTableForKey:(NSString *)key value:(NSString *)comment andTable:(NSString *) table {
     return [bundle localizedStringForKey:key value:comment table:table];
+}
+
+#pragma mrk - Pluralization
+
+- (NSString *) localizedPluralStringFromTableForKey:(NSString *)key count:(NSInteger)count value:(NSString *)comment andTable:(NSString *) table {
+    NSString *languageCode = [[bundle preferredLocalizations] objectAtIndex:0];
+    
+    return [NSString stringWithFormat:[bundle localizedStringForKey:TTTLocalizedPluralStringKeyForCountAndSingularNounForLanguage(count, key, languageCode) value:comment table:(table)], count];
 }
 
 #pragma mark - Lang get

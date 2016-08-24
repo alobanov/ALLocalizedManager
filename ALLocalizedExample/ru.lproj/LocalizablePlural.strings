@@ -1,0 +1,13 @@
+/* 
+  LocalizablePlural.strings
+  ALLocalizedExample
+
+  Created by Dmitry Avvakumov on 24.08.16.
+  Copyright © 2016 Lobanov Aleksey. All rights reserved.
+*/
+
+/* Murloc */
+"%d Murloc (plural rule: one)" = "%d мурлок";
+"%d Murloc (plural rule: few)" = "%d мурлока";
+"%d Murloc (plural rule: many)" = "%d мурлоков";
+"%d Murloc (plural rule: other)" = "%d мурлока";

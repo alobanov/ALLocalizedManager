@@ -8,6 +8,8 @@
 
 #import "ViewController.h"
 
+#import "PluralViewController.h"
+
 @interface ViewController ()
 
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
@@ -31,6 +33,14 @@
     // observe
     [[ALLocalizedManager sharedInstance] removeChangeLanguageBlockForObject:self];
 }
+
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - Controller life circle
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -58,16 +68,18 @@
     [_currentLangLabel setText:ALLocalizedStringFromTable(@"Current_lang", @"Русский", @"examplePlist")];
 }
 
+#pragma mark - Btn actions
+
 - (IBAction) changeLanguage:(UIButton *) button {
     NSString *curLang = [[ALLocalizedManager sharedInstance] getLang];
     NSString *newLang = ([curLang isEqualToString:@"ru"]) ? @"pt-PT" : @"ru";
     ALLocalizationSetLanguage(newLang);
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (IBAction) advancedAction:(UIButton *) button {
+    PluralViewController *controller = [[PluralViewController alloc] initWithNibName:@"PluralViewController" bundle:nil];
+    
+    [self.navigationController pushViewController:controller animated:YES];
 }
 
 @end

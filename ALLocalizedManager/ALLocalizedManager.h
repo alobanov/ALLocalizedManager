@@ -49,6 +49,13 @@
 #define ALLocalizedStringGeneral(key, comment) \
 [[ALLocalizedManager sharedInstance] localizedStringFromTableForKey:(key) value:(comment) andTable:@"Localizable"]
 
+#define ALLocalizedPluralString(key, countDigit, comment) \
+[[ALLocalizedManager sharedInstance] localizedPluralStringFromTableForKey:(key) count:(countDigit) value:(comment) andTable:@"LocalizablePlural"]
+
+#define ALLocalizedPluralStringFromTable(key, countDigit, comment, tableName) \
+[[ALLocalizedManager sharedInstance] localizedPluralStringFromTableForKey:(key) count:(countDigit) value:(comment) andTable:tableName]
+
+
 @interface ALLocalizedManager : NSObject;
 
 + (id)sharedInstance;
@@ -58,6 +65,10 @@
 - (NSString *) localizedStringForKey:(NSString *)key value:(NSString *)comment;
 - (NSString *) localizedStringFromTableForKey:(NSString *)key value:(NSString *)comment andTable:(NSString *) table;
 
+#pragma mrk - Pluralization
+
+- (NSString *) localizedPluralStringFromTableForKey:(NSString *)key count:(NSInteger)count value:(NSString *)comment andTable:(NSString *) table;
+    
 #pragma mark - Lang set
 
 - (void)setLanguages:(NSArray *)languages;
