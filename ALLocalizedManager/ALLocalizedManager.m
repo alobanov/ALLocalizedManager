@@ -67,7 +67,8 @@ static ALLocalizedManager *SINGLETON = nil;
 #pragma mrk - Pluralization
 
 - (NSString *) localizedPluralStringFromTableForKey:(NSString *)key count:(NSInteger)count value:(NSString *)comment andTable:(NSString *) table {
-    NSString *languageCode = [[bundle preferredLocalizations] objectAtIndex:0];
+    // NSString *languageCode = [[bundle preferredLocalizations] objectAtIndex:0];
+    NSString *languageCode = self.currentLanguage;
     
     return [NSString stringWithFormat:[bundle localizedStringForKey:TTTLocalizedPluralStringKeyForCountAndSingularNounForLanguage(count, key, languageCode) value:comment table:(table)], count];
 }
