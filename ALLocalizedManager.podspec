@@ -12,7 +12,6 @@ Pod::Spec.new do |s|
 
   s.source       = { :git => "git@github.com:alobanov/ALLocalizedManager.git", :tag => s.version.to_s }
   s.source_files = "ALLocalizedManager/*.{h,m}"
-  s.public_header_files = "ALLocalizedManager/**/*'"
   s.framework    = "UIKit"
   s.requires_arc = true
   
